@@ -1,21 +1,25 @@
-.body{
-  font-family: "Anton", sans-serif;
- 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body, html {
   overflow-x: hidden;
+  height: 100%;
+  font-family: "Anton", sans-serif;
 }
 
 .navbar-nav {
   gap: 20px;
-  margin-left: 200px ;
-  font-size: 19px;
+  margin-left: 270px ;
+  
     
 }
 
 .navbar-nav a{
   color: #355d2b;
+  font-size: 22px;
 }
 
 .nav-link{
@@ -52,14 +56,13 @@ body, html {
 
 
 .custom-navbar {
-  height: 90px;
-  background-color: #f8f9fa; 
+  height: 90px; 
   padding: 0 30px;
 }
 
 
 .logo-navbar {
-  height: 200px;     
+  height: 90px;     
   width: auto;
   object-fit: contain;
 }
@@ -881,9 +884,7 @@ button:hover {
   top: 20px ;
 }
 
-section#projets {
-  scroll-margin-top: 80px; /* Ajuste selon la hauteur de ta navbar fixe */
-}
+
 
 /* Pour les petits écrans (mobiles) */
 @media screen and (max-width: 767px) {
@@ -943,7 +944,7 @@ section#projets {
 
   .nav-link {
     display: block !important;
-    width: 100% !important;
+    width: 50% !important;
     text-align: center !important;
     padding: 10px 0 !important;
   }
@@ -1039,6 +1040,61 @@ section#projets {
     top: 10px !important;
     font-size: 16px !important;
   }
+
+
+  /* Correction spécifique pour la section évènements sur mobile */
+.rich {
+  flex-direction: column !important;
+  margin-left: 10px !important;
+  margin-top: 40px !important;
+  gap: 20px !important;
+}
+
+.write p {
+  width: 100% !important;
+  margin-left: 0 !important;
+  font-size: 18px !important;
+}
+
+.drow {
+  margin-left: 0 !important;
+  margin-top: 20px !important;
+  width: 100% !important;
+  max-width: 300px !important; /* ajuste si besoin */
+}
+
+.drow img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 10px !important;
+}
+
+.font {
+  margin-top: 10px !important;
+}
+
+.font h4 {
+  margin-top: 10px !important;
+}
+
+.font p {
+  font-size: 16px !important;
+  margin-top: 5px !important;
+}
+
+.event {
+  margin-left: 0 !important;
+  margin-top: 20px !important;
+  justify-content: center !important;
+}
+
+.btn {
+  display: block !important;
+  margin: 20px auto 40px auto !important; /* marge verticale et centrage horizontal */
+  max-width: 250px !important; /* largeur max */
+  text-align: center !important;
+}
+
 }
 
 /* Tablette */
@@ -1103,6 +1159,56 @@ section#projets {
     height: 120px !important;
   }
 
+  /* --- CORRECTION NAVBAR TABLETTE --- */
+.custom-navbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap !important;
+  padding: 0 20px !important;
+  height: auto !important;
+  background-color: white !important; /* si fond nécessaire */
+  z-index: 1000 !important;
+  position: relative !important;
+}
+
+.container-fluid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+}
+
+.logo-navbar {
+  height: 80px !important; /* Réduit le logo en tablette */
+  max-width: 150px !important;
+}
+
+.navbar-collapse {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-top: 10px !important;
+}
+
+.navbar-nav {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 15px !important;
+  margin: 0 auto !important;
+  padding: 10px 0 !important;
+}
+
+.nav-link {
+  font-size: 18px !important;
+  padding: 8px 10px !important;
+}
+
+
   .hero {
     padding-left: 30px !important;
     justify-content: flex-start !important;
@@ -1124,10 +1230,25 @@ section#projets {
   }
 
   .gallery {
-    width: 100% !important;
-    margin-left: 0 !important;
-    grid-template-columns: repeat(2, 1fr) !important;
+    width: 100% !important; /* Prend toute la largeur possible */
+    margin-left: 0 !important; /* Annule le margin-left énorme */
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 colonnes au lieu de 3 */
     gap: 10px !important;
+    padding: 20px !important;
+    margin-top: 0 !important; /* Annule le margin-top négatif */
+    position: relative !important;
+  }
+
+   .pass a {
+    color: white !important;
+    display: block !important;
+    text-decoration: none !important;
+  }
+
+  /* Pour éviter que le contenu soit caché derrière le bouton */
+  #communaute {
+    position: relative !important;
+    padding-right: 220px !important;
   }
 
   .cadrage {
@@ -1147,6 +1268,28 @@ section#projets {
   .texte-gauche {
     max-width: 400px !important;
   }
+
+  .contact-section {
+  display: flex !important;
+  flex-direction: column !important;  /* Empile le texte et le formulaire */
+  align-items: center !important;
+  padding: 40px 20px !important;
+  gap: 20px !important;
+}
+
+.texte-gauche {
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-bottom: 20px !important;
+  text-align: center !important;
+}
+
+.formulaire-container {
+  width: 100% !important;
+  max-width: 420px !important;
+  margin-left: 0 !important;
+}
+
 
   /* Footer : boutons alignés proprement */
   .foot {
