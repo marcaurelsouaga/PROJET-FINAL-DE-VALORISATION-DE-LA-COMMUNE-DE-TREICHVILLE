@@ -10,16 +10,19 @@ body, html {
   font-family: "Anton", sans-serif;
 }
 
+
+
 .navbar-nav {
   gap: 20px;
-  margin-left: 270px ;
-  
+  margin-left: 490px ;
+  align-items: center;
+  font-size: 18px;
     
 }
 
 .navbar-nav a{
   color: #355d2b;
-  font-size: 22px;
+  font-size: 19px;
 }
 
 .nav-link{
@@ -68,11 +71,7 @@ body, html {
 }
 
 
-.navbar-nav {
-  gap: 25px;
-  font-size: 18px;
-  align-items: center;
-}
+
 
 
 
@@ -944,7 +943,7 @@ button:hover {
 
   .nav-link {
     display: block !important;
-    width: 50% !important;
+    width: 30% !important;
     text-align: center !important;
     padding: 10px 0 !important;
   }
